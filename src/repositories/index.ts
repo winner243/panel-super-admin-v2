@@ -1,0 +1,6 @@
+export * from "./profile.repository"
+export * from "./organization.repository"
+export * from "./organization-member.repository"
+export * from "./role.repository"
+export * from "./permission.repository"
+export * from "./role-permission.repository"
