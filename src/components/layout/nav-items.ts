@@ -9,11 +9,11 @@ import {
   FileText,
   Flag,
   Gauge,
+  Key,
   LayoutDashboard,
   ListChecks,
   Lock,
   Mail,
-  Plug,
   Puzzle,
   ScrollText,
   Settings,
@@ -54,8 +54,9 @@ export const navSections: NavSection[] = [
     heading: 'Billing',
     items: [
       { title: 'Plans', icon: Boxes, disabled: true },
-      { title: 'Subscriptions', icon: CreditCard, disabled: true },
-      { title: 'Payments', icon: BadgeDollarSign, disabled: true },
+      { title: 'Subscriptions', href: '/subscriptions', icon: CreditCard },
+      { title: 'Payments', href: '/payments', icon: BadgeDollarSign },
+      { title: 'Revenue', href: '/revenue', icon: BadgeDollarSign },
       { title: 'Invoices', icon: FileText, disabled: true },
     ],
   },
@@ -63,13 +64,14 @@ export const navSections: NavSection[] = [
     heading: 'Product',
     items: [
       { title: 'Usage', icon: Gauge, disabled: true },
-      { title: 'Feature Flags', icon: Flag, disabled: true },
+      { title: 'Analytics', href: '/analytics', icon: Activity },
+      { title: 'Feature Flags', href: '/feature-flags', icon: Flag },
     ],
   },
   {
     heading: 'Communication',
     items: [
-      { title: 'Notifications', icon: Bell, disabled: true },
+      { title: 'Notifications', href: '/notifications', icon: Bell },
       { title: 'Emails', icon: Mail, disabled: true },
     ],
   },
@@ -77,9 +79,9 @@ export const navSections: NavSection[] = [
     heading: 'Infrastructure',
     items: [
       { title: 'Storage', icon: Database, disabled: true },
-      { title: 'Webhooks', icon: Webhook, disabled: true },
-      { title: 'Jobs', icon: ListChecks, disabled: true },
-      { title: 'System Health', icon: Activity, disabled: true },
+      { title: 'Webhooks', href: '/webhooks', icon: Webhook },
+      { title: 'Jobs', href: '/jobs', icon: ListChecks },
+      { title: 'System Health', href: '/system-health', icon: Activity },
     ],
   },
   {
@@ -92,7 +94,7 @@ export const navSections: NavSection[] = [
   {
     heading: 'Developer',
     items: [
-      { title: 'API', icon: Plug, disabled: true },
+      { title: 'API', href: '/api-keys', icon: Key },
       { title: 'Integrations', icon: Puzzle, disabled: true },
     ],
   },

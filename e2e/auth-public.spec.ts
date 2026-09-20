@@ -15,7 +15,25 @@ test.describe("Auth — surfaces publiques", () => {
   })
 
   test("les routes privées redirigent vers /auth/login sans session", async ({ page }) => {
-    const protectedPaths = ["/", "/users", "/organizations", "/audit", "/settings", "/roles", "/permissions"]
+    const protectedPaths = [
+      "/",
+      "/users",
+      "/organizations",
+      "/audit",
+      "/settings",
+      "/roles",
+      "/permissions",
+      "/subscriptions",
+      "/payments",
+      "/revenue",
+      "/analytics",
+      "/feature-flags",
+      "/notifications",
+      "/webhooks",
+      "/api-keys",
+      "/system-health",
+      "/jobs",
+    ]
 
     for (const route of protectedPaths) {
       await page.goto(route)
